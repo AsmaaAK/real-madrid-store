@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid Official Store</title>
+    <link href="../public/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" 
+                         alt="Real Madrid Logo" class="h-10">
+                    <span class="ml-2 text-xl font-bold text-gray-800">Real Madrid Store</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Jerseys</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Accessories</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Collections</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 hidden md:block">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 hidden md:block">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+            <!-- قائمة الجوال  -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#" class="block px-3 py-2 text-gray-800 hover:text-blue-600">Home</a>
+            <a href="#" class="block px-3 py-2 text-gray-800 hover:text-blue-600">Jerseys</a>
+            <a href="#" class="block px-3 py-2 text-gray-800 hover:text-blue-600">Accessories</a>
+            <a href="#" class="block px-3 py-2 text-gray-800 hover:text-blue-600">Collections</a>
+            <a href="#" class="block px-3 py-2 text-gray-800 hover:text-blue-600">Contact</a>
+            <div class="flex px-3 py-2 space-x-4">
+                <a href="#" class="text-gray-800 hover:text-blue-600">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+     </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    Official Real Madrid Merchandise
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Authentic jerseys, accessories, and collectibles from your favorite football club
+                </p>
+                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div class="rounded-md shadow">
+                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                            Shop Now
+                        </a>
+                    </div>
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                            New Arrivals
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section with Product Slider -->
+    <main class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Featured Products
+            </h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                Official merchandise from the most successful club in football history
+            </p>
+        </div>
+
+        <!-- Product Slider -->
+        <div class="relative">
+            <!-- Slider Controls -->
+            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none">
+                <i class="fas fa-chevron-left text-gray-800"></i>
+            </button>
+            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none">
+                <i class="fas fa-chevron-right text-gray-800"></i>
+            </button>
+
+            <!-- Slider Container -->
+            <div id="slider" class="overflow-hidden relative">
+                <div id="sliderInner" class="flex w-max transition-transform duration-300 ease-in-out">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+<div id="productModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+       
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        </div>
+
+        <div class="modal-container inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl w-full opacity-0 scale-95 duration-300">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                        <div class="flex justify-between items-start">
+                            <h3 id="modalTitle" class="text-2xl leading-6 font-bold text-gray-900">
+                                Product Name
+                            </h3>
+                            <button id="closeModal" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-center justify-center bg-gray-100 rounded-lg p-4">
+                                <img id="modalImage" src="" alt="Product" class="max-h-80 h-auto object-contain rounded-lg">
+                            </div>
+                            <div>
+                                <p id="modalBrand" class="text-sm text-gray-500">Real Madrid Official</p>
+                                <div id="modalRating" class="flex mt-2 mb-4"></div>
+                                <p id="modalDescription" class="text-gray-700 mb-4"></p>
+                                <div class="flex items-center mb-4">
+                                    <div id="modalPrice"></div>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-sm text-gray-500">Coupon Code: <span class="font-bold text-blue-600">RM2023</span></p>
+                                </div>
+                                <div class="mt-6">
+                                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                                        <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Real Madrid Store</h3>
+                    <p class="text-gray-400">
+                        The official store for Real Madrid CF merchandise, jerseys, and collectibles.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Jerseys</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Training Gear</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Collectibles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Customer Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-gray-400">
+                        Subscribe to our newsletter for exclusive offers
+                    </p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-gray-800 rounded-l w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 Real Madrid Official Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
